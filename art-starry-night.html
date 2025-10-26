@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Starry Night - Edwin's Art Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-palette"></i> Edwin's Art Gallery
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="art-list.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="py-3 bg-light" style="margin-top: 80px;">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="art-list.html">Gallery</a></li>
+                    <li class="breadcrumb-item active">The Starry Night</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Art Detail Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="art-detail">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&w=800" alt="The Starry Night" class="art-detail-image">
+                        <div class="art-detail-content">
+                            <h1 class="art-title">The Starry Night</h1>
+                            <h2 class="art-artist">Vincent van Gogh</h2>
+                            <p class="art-year"><i class="fas fa-calendar"></i> 1889</p>
+                            
+                            <div class="art-description">
+                                <p>The Starry Night is an oil on canvas painting by Dutch Post-Impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an idealized village.</p>
+                                
+                                <p>The painting features a swirling night sky filled with flowing clouds, blazing stars, and a bright crescent moon. Below the rolling hills of the horizon lies a small town, while a large cypress tree dominates the left side of the canvas, reaching toward the sky like flames.</p>
+                                
+                                <p>Despite being painted during van Gogh's stay at the Saint-Paul-de-Mausole asylum, The Starry Night is considered one of his finest works and is among the most recognized paintings in the history of Western culture. The work was painted during the day in van Gogh's ground-floor studio, as he was not allowed to paint in his bedroom.</p>
+                            </div>
+
+                            <!-- Art Details -->
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-info-circle text-primary"></i> Details</h5>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Medium:</strong> Oil on canvas</li>
+                                        <li><strong>Dimensions:</strong> 73.7 cm × 92.1 cm</li>
+                                        <li><strong>Location:</strong> Museum of Modern Art, New York</li>
+                                        <li><strong>Movement:</strong> Post-Impressionism</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-palette text-primary"></i> Technique</h5>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Style:</strong> Expressionistic</li>
+                                        <li><strong>Colors:</strong> Blue, yellow, white</li>
+                                        <li><strong>Brushwork:</strong> Dynamic, swirling strokes</li>
+                                        <li><strong>Composition:</strong> Rhythmic movement</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5><i class="fas fa-user text-primary"></i> About the Artist</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6>Vincent van Gogh (1853-1890)</h6>
+                            <p>Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade, he created approximately 2,100 artworks.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5><i class="fas fa-share text-primary"></i> Share this Artwork</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="d-flex justify-content-center gap-2">
+                                <button class="btn btn-outline-primary">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button class="btn btn-outline-info">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <button class="btn btn-outline-danger">
+                                    <i class="fab fa-pinterest"></i>
+                                </button>
+                                <button class="btn btn-outline-success">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-heart text-primary"></i> Add to Favorites</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <button class="btn btn-outline-danger btn-lg">
+                                <i class="far fa-heart"></i> Add to Favorites
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Artworks Section -->
+    <section class="similar-arts py-5 bg-light">
+        <div class="container">
+            <h3 class="text-center mb-5">
+                <i class="fas fa-images text-primary"></i> Similar Artworks in Impressionism
+            </h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="art-card">
+                        <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&w=400" alt="Water Lilies" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Water Lilies</h5>
+                            <p class="artist-name">Claude Monet</p>
+                            <p class="card-text">A series of approximately 250 oil paintings depicting Monet's flower garden.</p>
+                            <a href="art-water-lilies.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="art-card">
+                        <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&w=400" alt="Impression, Sunrise" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Impression, Sunrise</h5>
+                            <p class="artist-name">Claude Monet</p>
+                            <p class="card-text">The painting that gave the Impressionist movement its name.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="art-card">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&w=400" alt="Café Terrace at Night" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Café Terrace at Night</h5>
+                            <p class="artist-name">Vincent van Gogh</p>
+                            <p class="card-text">A painting depicting a café terrace with bright yellow lighting.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Edwin's Art Gallery. All rights reserved. | Assignment 1 - Art Gallery Website</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script>
+        // Favorite button functionality
+        document.querySelector('.btn-outline-danger').addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                this.innerHTML = '<i class="fas fa-heart"></i> Added to Favorites';
+                this.classList.remove('btn-outline-danger');
+                this.classList.add('btn-danger');
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                this.innerHTML = '<i class="far fa-heart"></i> Add to Favorites';
+                this.classList.remove('btn-danger');
+                this.classList.add('btn-outline-danger');
+            }
+        });
+    </script>
+</body>
+</html>

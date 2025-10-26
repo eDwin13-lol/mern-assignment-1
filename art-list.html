@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - Edwin's Art Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-palette"></i> Edwin's Art Gallery
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="art-list.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-light" style="margin-top: 80px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-4">Art Gallery Collection</h1>
+                    <p class="lead">Explore our curated collection of masterpieces from renowned artists around the world.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="d-flex align-items-center justify-content-md-end">
+                        <i class="fas fa-images fa-2x text-primary me-2"></i>
+                        <span class="h4 mb-0">15 Artworks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-3 bg-white shadow-sm">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary active" onclick="filterGallery('all')">All</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="filterGallery('classical')">Classical</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="filterGallery('modern')">Modern</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="filterGallery('contemporary')">Contemporary</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="filterGallery('impressionism')">Impressionism</button>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <div class="input-group" style="max-width: 300px; margin-left: auto;">
+                        <input type="text" class="form-control" placeholder="Search artworks..." id="searchInput">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Art Piece 1 -->
+                <div class="art-card" data-category="impressionism">
+                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&w=400" alt="The Starry Night" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">The Starry Night</h5>
+                        <p class="artist-name">Vincent van Gogh</p>
+                        <p class="card-text">A swirling night sky over a French village, one of the most recognizable works in the history of Western culture.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">Impressionism</span>
+                            <span class="text-muted">1889</span>
+                        </div>
+                        <a href="art-starry-night.html" class="btn btn-primary mt-3 w-100">
+                            <i class="fas fa-eye"></i> View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Art Piece 2 -->
+                <div class="art-card" data-category="classical">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&w=400" alt="Mona Lisa" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Mona Lisa</h5>
+                        <p class="artist-name">Leonardo da Vinci</p>
+                        <p class="card-text">The world's most famous portrait, renowned for the subject's enigmatic expression and technical mastery.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning">Classical</span>
+                            <span class="text-muted">1503-1519</span>
+                        </div>
+                        <a href="art-mona-lisa.html" class="btn btn-primary mt-3 w-100">
+                            <i class="fas fa-eye"></i> View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Art Piece 3 -->
+                <div class="art-card" data-category="modern">
+                    <img src="https://images.unsplash.com/photo-1578662015833-0453d7d4ba08?ixlib=rb-4.0.3&w=400" alt="The Persistence of Memory" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">The Persistence of Memory</h5>
+                        <p class="artist-name">Salvador Dalí</p>
+                        <p class="card-text">Famous surrealist painting featuring melting clocks, exploring the relativity and fluidity of time.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-success">Modern</span>
+                            <span class="text-muted">1931</span>
+                        </div>
+                        <a href="art-persistence-memory.html" class="btn btn-primary mt-3 w-100">
+                            <i class="fas fa-eye"></i> View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Art Piece 4 -->
+                <div class="art-card" data-category="impressionism">
+                    <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&w=400" alt="Water Lilies" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Water Lilies</h5>
+                        <p class="artist-name">Edwin Monet</p>
+                        <p class="card-text">A series of approximately 250 oil paintings depicting Monet's flower garden at his home in Giverny.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">Impressionism</span>
+                            <span class="text-muted">1896-1926</span>
+                        </div>
+                        <a href="art-water-lilies.html" class="btn btn-primary mt-3 w-100">
+                            <i class="fas fa-eye"></i> View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Art Piece 5 -->
+                <div class="art-card" data-category="modern">
+                    <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&w=400" alt="Guernica" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Guernica</h5>
+                        <p class="artist-name">Pablo Picasso</p>
+                        <p class="card-text">A powerful anti-war painting depicting the tragedies of war and the suffering it inflicts upon individuals.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-success">Modern</span>
+                            <span class="text-muted">1937</span>
+                        </div>
+                        <a href="art-guernica.html" class="btn btn-primary mt-3 w-100">
+                            <i class="fas fa-eye"></i> View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Art Piece 6 -->
+                <div class="art-card" data-category="classical">
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0401ba1fe65?ixlib=rb-4.0.3&w=400" alt="The Birth of Venus" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">The Birth of Venus</h5>
+                        <p class="artist-name">Sandro Botticelli</p>
+                        <p class="card-text">A masterpiece of the Italian Renaissance depicting the goddess Venus emerging from the sea as a fully grown woman.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning">Classical</span>
+                            <span class="text-muted">1484-1486</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3 w-100">
+                            <i class="fas fa-eye"></i> View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Art Piece 7 -->
+                <div class="art-card" data-category="classical">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&w=400" alt="The Last Supper" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">The Last Supper</h5>
+                        <p class="artist-name">Leonardo da Vinci</p>
+                        <p class="card-text">A mural painting depicting the biblical scene of Jesus announcing that one of his disciples will betray him.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning">Classical</span>
+                            <span class="text-muted">1495-1498</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3 w-100">
+                            <i class="fas fa-eye"></i> View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Art Piece 8 -->
+                <div class="art-card" data-category="impressionism">
+                    <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&w=400" alt="Impression, Sunrise" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Impression, Sunrise</h5>
+                        <p class="artist-name">Edwin Monet</p>
+                        <p class="card-text">The painting that gave the Impressionist movement its name, depicting the port of Le Havre at sunrise.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">Impressionism</span>
+                            <span class="text-muted">1872</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3 w-100">
+                            <i class="fas fa-eye"></i> View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Art Piece 9 -->
+                <div class="art-card" data-category="modern">
+                    <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&w=400" alt="The Scream" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">The Scream</h5>
+                        <p class="artist-name">Edvard Munch</p>
+                        <p class="card-text">An expressionist painting showing a figure with an agonized expression against a tumultuous orange sky.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-success">Modern</span>
+                            <span class="text-muted">1893</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3 w-100">
+                            <i class="fas fa-eye"></i> View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Discover More Art</h2>
+            <p class="lead">Join our community to access exclusive collections and exhibitions</p>
+            <a href="signup.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-user-plus"></i> Join Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Edwin's Art Gallery. All rights reserved. | Assignment 1 - Art Gallery Website</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script>
+        // Filter button activation
+        document.querySelectorAll('.btn-group .btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.btn-group .btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const artCards = document.querySelectorAll('.art-card');
+            
+            artCards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const artist = card.querySelector('.artist-name').textContent.toLowerCase();
+                const description = card.querySelector('.card-text').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || artist.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 0.6s ease-out';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
